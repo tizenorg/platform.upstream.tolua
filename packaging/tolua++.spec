@@ -1,5 +1,5 @@
-Name:       tolua
-Summary:    tolua package
+Name:       tolua++
+Summary:    tolua++ package
 Version:    1.0.93
 Release:    1
 Group:      TO_BE/FILLED_IN
@@ -9,15 +9,15 @@ BuildRequires:  liblua-devel
 BuildRequires:  cmake
 
 %description
-tolua package
+tolua++ package
 
 %package devel
-Summary:    tolua package (devel)
+Summary:    tolua++ package (devel)
 Group:      Development/Libraries
 Requires:   %{name} = %{version}-%{release}
 
 %description devel
-tolua package (devel)
+tolua++ package (devel)
 
 %prep
 %setup -q
@@ -37,7 +37,7 @@ make %{?jobs:-j%jobs}
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/license
-cp %{_builddir}/%{name}-%{version}/LICENSE  %{buildroot}/usr/share/license/%{name}
+cp %{_builddir}/%{name}-%{version}/COPYRIGHT  %{buildroot}/usr/share/license/%{name}
 
 %{__make} DESTDIR=%{?buildroot:%{buildroot}} INSTALL_ROOT=%{?buildroot:%{buildroot}} install
 rm -f %{?buildroot:%{buildroot}}%{_infodir}/dir
@@ -55,4 +55,4 @@ find %{?buildroot:%{buildroot}} -regex ".*\\.la$" | xargs rm -f --
 %files devel
 %defattr(-,root,root,-)
 %{_includedir}/tolua++.h
-%{_libdir}/libtolua.a
+%{_libdir}/libtolua++.a
