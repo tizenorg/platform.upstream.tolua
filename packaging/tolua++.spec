@@ -48,7 +48,7 @@ find %{?buildroot:%{buildroot}} -regex ".*\\.la$" | xargs rm -f --
 %postun -p /sbin/ldconfig
 
 %files
-%manifest tolua.manifest
+%manifest tolua++.manifest
 %defattr(-,root,root,-)
 /usr/share/license/%{name}
 
