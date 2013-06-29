@@ -3,6 +3,7 @@ Version:        1.0.93
 Release:        0
 Summary:        C/C++ with Lua Integration Tool
 Source:         http://www.codenix.com/~tolua/tolua++-%{version}.tar.bz2
+Source1001: 	tolua++.manifest
 Url:            http://www.codenix.com/~tolua/
 Group:          Development/Libraries
 License:        MIT
@@ -21,6 +22,7 @@ as well as other features and bugfixes.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 cat <<'EOF' > config_linux.py
@@ -47,6 +49,7 @@ scons %{?_smp_flags} \
     install
 
 %files
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %license COPYRIGHT 
 %{_bindir}/tolua++
