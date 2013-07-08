@@ -1,0 +1,8 @@
+Change-Id: I4116ac1492c7779d04e7f121f929783b93ad6725
+Code-Review+2: Ryan Ware <ware@linux.intel.com>
+Verified+1: Ryan Ware <ware@linux.intel.com>
+Submitted-by: Ryan Ware <ware@linux.intel.com>
+Submitted-at: Mon, 08 Jul 2013 09:38:28 -0700
+Reviewed-on: https://review.tizen.org/gerrit/5002
+Project: platform/upstream/tolua++
+Branch: refs/heads/tizen
