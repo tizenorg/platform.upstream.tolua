@@ -7,6 +7,7 @@ Source1001: 	tolua++.manifest
 Url:            http://www.codenix.com/~tolua/
 Group:          Development/Libraries
 License:        MIT
+BuildRequires:  python
 BuildRequires:  scons
 BuildRequires:  lua-devel
 BuildRequires:  gcc-c++
